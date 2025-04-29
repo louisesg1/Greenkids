@@ -6,15 +6,26 @@ import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 ---
 
-<MainLayout title="Titel">
-  <article>
-    <h1>Index overskrift</h1>
-    <Button>Klik!</Button>
+<MainLayout title="Green Kids and Moms">
+  <section>
+    <article class="text-center">
+      <h1>Green Kids and <br /> Moms Secondhand</h1>
+      <p>
+        Vi er en moderne gjenbruksbutikk i Oslo, hvor du kan kjøpe billige <br
+        />
+        brukte barneklær og dameklær i tillegg til brukte leker og barneutstyr
+      </p>
+      <Button>Book en stand hos oss!</Button>
+    </article>
+    <h2>Dette er h2</h2>
+    <h3>Dette er h3</h3>
+    <h4>Dette er h4</h4>
+    <h5>Dette er h5</h5>
     <p>
       Link til <Link href="https://www.kea.dk" target="_blank"
         >En anden side</Link
       >
     </p>
     <Image src={thumbsup} alt="" />
-  </article>
+  </section>
 </MainLayout>
