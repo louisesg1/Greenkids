@@ -6,6 +6,26 @@
 
 @theme {
   /* Her tilføjes theme variable // tokens */
+  --color-gronn-50: #EAFOE2;
+  --color-gronn-100: #DBE6C7;  
+  --color-gronn-200: #DBE6C7;
+  --color-gronn-300: #DBE6C7;
+  --color-gronn-400: #DBE6C7;
+  --color-gronn-500: #DBE6C7;
+  --color-gronn-600: #DBE6C7;
+  --color-gronn-700: #DBE6C7;
+  --color-gronn-800: #DBE6C7;
+  --color-gronn-900: #DBE6C7;
+  --color-blaa-50: #EAFOE2;
+  --color-blaa-100: #DBE6C7;  
+  --color-blaa-200: #DBE6C7;
+  --color-blaa-300: #DBE6C7;
+  --color-blaa-400: #DBE6C7;
+  --color-blaa-500: #DBE6C7;
+  --color-blaa-600: #DBE6C7;
+  --color-blaa-700: #DBE6C7;
+  --color-blaa-800: #DBE6C7;
+  --color-blaa-900: #DBE6C7;
 }
 
 @layer base {
