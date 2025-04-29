@@ -1,17 +1,16 @@
 ---
 const { variant = "primary" } = Astro.props;
 
-const buttonStyling = "rounded-full px-4 p-1.5";
+const buttonStyling = "rounded-full my-4";
 
 const variantClasses = {
   primary:
-    "font-semibold bg-roed-600 text-gul-50 border hover:bg-transparent  hover:border-roed-600 hover:text-roed-600 hover:border",
-  secondary:
-    "font-semibold bg-lilla-950 text-gul-50 border hover:bg-transparent  hover:border-lilla-950 hover:text-lilla-950 hover:border",
+    "px-12 p-2 font-normal bg-rosa-400 text-gronn-800 border border-2 hover:shadow-button border-gronn-800 active:bg-rosa-500",
+  secondary: "font-normal text-gronn-800 border-2 hover:shadow-button",
   mobileprimary:
-    "font-semibold text-lillebase bg-roed-600 text-gul-50 border-mobile hover:bg-transparent  hover:border-roed-600 hover:text-roed-600 hover:border",
+    "px-4 p-1.5 font-normal text-gronn-800 text-lillebase bg-rosa-400 border-mobile hover:shadow-button active:bg-rosa-500",
   mobilesecondary:
-    "font-semibold text-lillebase bg-lilla-950 text-gul-50 border-mobile  hover:bg-transparent  hover:border-lilla-950 hover:text-lilla-950 hover:border",
+    "px-4 p-1.5 font-normal text-lillebase text-gronn-800 border-mobile hover:shadow-button",
 };
 ---
 

@@ -63,6 +63,7 @@
   --color-brun-900: #875923;
 
   --font-weight-normal: 500;
+  --font-weight-bold: 800;
 
   --text-sm: 1rem;
   --text-sm--line-height: calc(1.5 / 1);
@@ -78,6 +79,8 @@
   --text-3xl--line-height: calc(4.5 / 4);
   --text-4xl: 6rem;
   --text-4xl--line-height: calc(6.5 / 6);
+
+  --shadow-button: 4px 4px 0px var(--color-gronn-800);
 }
 
 @layer base {
@@ -85,7 +88,7 @@
     font-family: 'Bricolage Grotesque', sans-serif;
     font-size: var(--text-4xl);
     line-height: var(--text-4xl--line-height);
-    font-weight: 800;
+    font-weight: var(--font-weight-bold);
     color: var(--color-gronn-800);
   }
 
@@ -93,7 +96,7 @@
     font-family: 'Bricolage Grotesque', sans-serif;
     font-size: var(--text-3xl);
     line-height: var(--text-3xl--line-height);
-    font-weight: 800;
+    font-weight: var(--font-weight-bold);
     color: var(--color-gronn-800);
   }
 
@@ -101,7 +104,7 @@
     font-family: 'Bricolage Grotesque', sans-serif;
     font-size: var(--text-2xl);
     line-height: var(--text-2xl--line-height);
-    font-weight: 800;
+    font-weight: var(--font-weight-bold);
     color: var(--color-gronn-800);
   }
 
@@ -109,7 +112,7 @@
     font-family: 'Manrope', sans-serif;
     font-size: var(--text-xl);
     line-height: var(--text-xl--line-height);
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     color: var(--color-gronn-800);
   }
 
@@ -117,7 +120,7 @@
     font-family: 'Manrope', sans-serif;
     font-size: var(--text-lg);
     line-height: var(--text-lg--line-height);
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     color: var(--color-gronn-800);
   }
 
@@ -125,16 +128,29 @@
     font-family: 'Manrope', sans-serif;
     font-size: var(--text-base);
     line-height: var(--text-base--line-height);
-    font-weight: 500;
+    font-weight: var(--font-weight-normal);
     color: var(--color-gronn-800);
   }
 
-  .p-small {
-    font-family: 'Manrope', sans-serif;
-    font-size: var(--text-base);
-    line-height: var(--text-base--line-height);
-    font-weight: 500;
-    color: var(--color-gronn-800);
+  :root {
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-7: 28px;
+    --space-8: 32px;
+    --space-9: 36px;
+    --space-10: 40px;
+    --space-11: 44px;
+    --space-12: 48px;
+    --space-13: 52px;
+    --space-14: 56px;
+    --space-15: 80px;
+    --space-16: 88px;
+    --space-17: 104px;
+    --space-18: 118px;
   }
   *,
   ::after,
@@ -164,5 +180,12 @@
   } */
 }
 @layer utilities{
-  
+  .p-small {
+    font-family: 'Manrope', sans-serif;
+    font-size: var(--text-base);
+    line-height: var(--text-base--line-height);
+    font-weight: var(--font-weight-normal);
+    color: var(--color-gronn-800);
+  }
+
 }
