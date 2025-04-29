@@ -80,7 +80,7 @@
   --text-4xl: 6rem;
   --text-4xl--line-height: calc(6.5 / 6);
 
-  --shadow-button: 4px 4px 0px var(--color-gronn-800);
+  --shadow-button: 5px 5px 0px var(--color-gronn-800);
 }
 
 @layer base {
@@ -162,6 +162,7 @@
 }
 
 @layer components{
+
   /* .typography {
     p {
       font-size: var(--text-base);
@@ -187,5 +188,11 @@
     font-weight: var(--font-weight-normal);
     color: var(--color-gronn-800);
   }
-
+  .navtext {
+    font-family: 'Manrope', sans-serif;
+    font-size: var(--text-base);
+    line-height: var(--text-base--line-height);
+    font-weight: var(--font-weight-normal);
+    color: var(--color-gronn-800);
+  }
 }

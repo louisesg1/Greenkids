@@ -1,5 +1,116 @@
 ---
+import { Image } from "astro:assets";
+import Button from "../components/Button.astro";
+import kryss from "../assets/images/x.webp";
 ---
-<div>
-Header - tilføj navigation mm.
+
+<div class="">
+  <div class="fixed top-0 left-0 w-full z-10 bg-gul-400">
+    <div class="flex justify-between items-center py-4 ml-3 px-4 z-15">
+      <a href="/" class="text-lg font-bold"> <h4 class="">logo</h4></a>
+
+      <button id="hamburgerButton" class="block text-gronn-800 md:hidden">
+        <svg
+          class="w-7 h-7"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="3"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+      <div class="space-x-8 flex items-center hidden md:flex">
+        <div class="max-w-xl mx-auto">
+          <a href="/bestil"
+            ><Button variant="primarysmall">Book en stand!</Button></a
+          >
+        </div>
+        <div class="relative">
+          <div class="flex">
+            <button
+              id="greenkidsDropdown"
+              class="flex items-center gap-2 group"
+            >
+              <p class="navtext">Om abonnementerne</p>
+              <div class="relative w-6 h-6"></div>
+            </button>
+          </div>
+          <div
+            id="dropdownMenu"
+            class="hidden absolute right-0 mt-2 w-48 bg-graa-200 rounded-lg z-40"
+          >
+            <ul class="py-2">
+              <li>
+                <a href="/faq" class="block px-4 py-2 hover:text-roed-600"
+                  >FAQ</a
+                >
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:text-roed-600"
+                  >Strakslevering</a
+                >
+              </li>
+
+              <li>
+                <a href="#" class="block px-4 py-2 hover:text-roed-600"
+                  >Kontakt</a
+                >
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:text-roed-600"
+                  >Betingelser</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a href="/omos" class="">
+          <p class="text-lilla-950 hover:text-roed-600 navigation">
+            Hvem er vi?
+          </p></a
+        >
+      </div>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="md:hidden hidden bg-graa-200 w-full">
+    <ul class="space-y-4 py-4 navigation">
+      <li>
+        <a href="/booking"><Button variant="primary">Book en stand</Button></a>
+      </li>
+      <li>
+        <a href="/index" class="block px-4 py-2">
+          <p class="navigation hover:text-roed-600">Forside</p>
+        </a>
+      </li>
+      <li>
+        <a href="/omoss" class="block px-4 py-2"
+          ><p class="hover:text-roed-600 navigation">Om oss</p></a
+        >
+      </li>
+      <li>
+        <a href="/faq" class="block px-4 py-2">
+          <p class="navigation hover:text-roed-600">FAQ</p>
+        </a>
+      </li>
+      <li>
+        <a href="/kontakt" class="block px-4 py-2">
+          <p class="navigation hover:text-roed-600">Kontakt oss!</p>
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
+
+<script>
+  document.getElementById("hamburgerButton").addEventListener("click", () => {
+    const mobileMenu = document.getElementById("mobileMenu");
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
