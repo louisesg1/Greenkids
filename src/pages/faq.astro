@@ -8,11 +8,19 @@ import faq from "../assets/images/faq.svg";
 ---
 
 <MainLayout title="FAQ">
-  <article class="pt-7">
-    <h1>FAQ</h1>
-    <section>
-      <Accordion />
-      <Image src={faq} alt="" />
+  <article>
+    <h1 class="text-center">FAQ</h1>
+    <section class="grid grid-cols-2">
+      <div class="order-2">
+        <Accordion />
+        <Accordion />
+        <Accordion />
+        <Accordion />
+        <Accordion />
+      </div>
+      <div class="order-1 mx-auto">
+        <Image src={faq} alt="" />
+      </div>
     </section>
   </article>
 </MainLayout>

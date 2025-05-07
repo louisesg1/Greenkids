@@ -195,4 +195,11 @@
     font-weight: var(--font-weight-normal);
     color: var(--color-gronn-800);
   }
+  .footerp {
+    font-family: 'Manrope', sans-serif;
+    font-size: var(--text-base);
+    line-height: var(--text-base--line-height);
+    font-weight: var(--font-weight-normal);
+    color: var(--color-gul-400);
+  }
 }
