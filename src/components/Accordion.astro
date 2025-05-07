@@ -1,0 +1,28 @@
+---
+
+---
+
+<div x-data="{ open: false }" class="border-2 border-gronn-800">
+  <button
+    @click="open = !open"
+    class="w-full flex justify-between items-center p-4 bg-gul-40 text-gronn-800"
+  >
+    <span class="text-left">[Spørsmål her]</span>
+    <svg
+      class="w-4 h-4 transform transition-transform"
+      :class="{ 'rotate-180': open }"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+  <div x-show="open" x-collapse class="p-4 bg-gul-400 text-gronn-800">
+    [Innhold]
+  </div>
+</div>
