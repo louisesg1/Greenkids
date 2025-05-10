@@ -1,5 +1,22 @@
 ---
-const { href = "#", target = "_self" } = Astro.props;
+const { href = "#", target = "_self", variant = "primary" } = Astro.props;
+
+const linkStyling = "rounded-full my-4";
+
+const variantClasses = {
+  primary:
+    "px-12 p-2 font-normal bg-rosa-400 text-gronn-800 border border-2 hover:shadow-button border-gronn-800 active:bg-rosa-500 disabled:bg-graa-200",
+  secondary:
+    "px-8 p-2 bg-gronn-200 font-normal text-gronn-800 border-2 hover:shadow-button active:bg-gronn-300",
+  primarysmall:
+    "px-4 p-1.5 font-normal text-gronn-800 text-lillebase bg-rosa-400 border-2 border-gronn-800 hover:shadow-button active:bg-rosa-500",
+  secondarysmall:
+    "px-4 p-1.5 font-normal text-lillebase text-gronn-800 border-2 border-gronn-800 hover:shadow-button",
+};
 ---
 
-<a href={href} class="underline" target={target}><slot /></a>
+<a
+  href={href}
+  class:list={[linkStyling, variantClasses[variant]]}
+  target={target}><slot /></a
+>
