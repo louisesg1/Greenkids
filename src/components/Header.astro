@@ -51,11 +51,8 @@ import logo from "../assets/images/logo.svg";
   </div>
 </div>
 
-<div id="mobileMenu" class="md:hidden hidden bg-gul-400 w-full">
+<div id="mobileMenu" class="md:hidden hidden bg-gul-400 w-full mt-22">
   <ul class="space-y-4 py-4 navigation">
-    <li>
-      <a href="/booking"><Button variant="primary">Book en stand</Button></a>
-    </li>
     <li>
       <a href="/index" class="block px-4 py-2">
         <p class="navigation hover:text-roed-600">Forside</p>
@@ -76,12 +73,19 @@ import logo from "../assets/images/logo.svg";
         <p class="navigation hover:text-roed-600">Kontakt oss!</p>
       </a>
     </li>
+    <li>
+      <a href="/booking"><Button variant="primary">Book en stand!</Button></a>
+    </li>
   </ul>
 </div>
 
 <script>
-  document.getElementById("hamburgerButton").addEventListener("click", () => {
+  document.addEventListener("DOMContentLoaded", () => {
+    const hamburgerButton = document.getElementById("hamburgerButton");
     const mobileMenu = document.getElementById("mobileMenu");
-    mobileMenu.classList.toggle("hidden");
+
+    hamburgerButton.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
   });
 </script>

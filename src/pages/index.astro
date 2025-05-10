@@ -3,12 +3,12 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
-import thumbsup from "../assets/images/thumbsup.png";
+import logo from "../assets/images/logo.svg";
 ---
 
 <MainLayout title="Green Kids and Moms">
-  <section>
-    <article class="text-center mt-space-14">
+  <section class="mx-auto">
+    <article class="text-center md:mt-36">
       <h1>Green Kids and <br /> Moms Secondhand</h1>
       <p>
         Vi er en moderne gjenbruksbutikk i Oslo, hvor du kan kjøpe billige <br
@@ -17,7 +17,7 @@ import thumbsup from "../assets/images/thumbsup.png";
       </p>
       <div class="max-w-xl mx-auto block md:hidden">
         <a href="/booking"
-          ><Button variant="mobileprimary">Book en stand hos oss!</Button></a
+          ><Button variant="primarysmall">Book en stand hos oss!</Button></a
         >
       </div>
       <div class="max-w-xl mx-auto md:block hidden">
@@ -26,12 +26,41 @@ import thumbsup from "../assets/images/thumbsup.png";
         >
       </div>
     </article>
-    <h2>Dette er h2</h2>
+    <article class="bg-blaa-400 grid grid-cols-2 px-[105px] py-8 gap-8">
+      <div>
+        <h2 class="pb-4">Gjenbruk på en ny og morsom måte!</h2>
+        <p class="pb-4">
+          Hos oss er det privatpersoner som selger sine brukte dame- og
+          barneklær, og barneutstyr. Du kan altså leie en salgsplass, som vi
+          kaller en stand. Standen som du leier blir da din egen minibutikk. Du
+          kommer og setter opp standen, men vi gjør selve salget! Du får en link
+          fra oss hvor du kan følge opp salget hjemme. Vi utbetaler 80% av det
+          du selger rett til din bankkonto. Anbefalt leieperiode er 2 uker og
+          koster kun 250 kr per uke.
+        </p>
+        <h3 class="pb-4">Salg av brukte klær har aldri vært så enkelt!</h3>
+        <p>
+          Butikken vår er ca 200m2 stor, og vi har lekerom i butikken. Shopping
+          hos oss er avslappende for foreldre og gøy for barn.
+        </p>
+      </div>
+      <div class="bg-gul-400 rounded-3xl border-4 border-gronn-800">
+        <Image src={logo} alt="" />
+        <h3>Har du flere spørsmål?</h3>
+        <div class="max-w-xl mx-auto block md:hidden">
+          <a href="/faq"
+            ><Button variant="secondarysmall">Les mer her!</Button></a
+          >
+        </div>
+        <div class="max-w-xl mx-auto md:block hidden">
+          <a href="/faq"><Button variant="secondary">Les mer her!</Button></a>
+        </div>
+      </div>
+    </article>
     <p>
       Link til <Link href="https://www.kea.dk" target="_blank"
         >En anden side</Link
       >
     </p>
-    <Image src={thumbsup} alt="" />
   </section>
 </MainLayout>
