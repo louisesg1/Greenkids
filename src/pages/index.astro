@@ -4,30 +4,36 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import logo from "../assets/images/logo.svg";
+import hero from "../assets/images/hero.svg";
 ---
 
 <MainLayout title="Green Kids and Moms">
-  <section class="mx-auto">
-    <article class="text-center md:mt-36">
-      <h1>Green Kids and <br /> Moms Secondhand</h1>
-      <p>
-        Vi er en moderne gjenbruksbutikk i Oslo, hvor du kan kjøpe billige <br
-        />
-        brukte barneklær og dameklær i tillegg til brukte leker og barneutstyr
-      </p>
-      <div class="max-w-xl mx-auto block md:hidden my-8">
-        <Link href="/booking" variant="primarysmall" target="_blank"
-          >Book en stand hos oss!</Link
-        >
-      </div>
-      <div class="max-w-xl mx-auto md:block hidden my-8">
-        <Link href="/booking" variant="primary" target="_blank"
-          >Book en stand hos oss!</Link
-        >
+  <section class="">
+    <article
+      class="text-center bg-no-repeat bg-cover bg-center h-[80vh] w-screen"
+      style={`background-image: url(${hero.src})`}
+    >
+      <div class="mx-auto">
+        <h1 class="mt-60">Green Kids and <br /> Moms Secondhand</h1>
+        <p>
+          Vi er en moderne gjenbruksbutikk i Oslo, hvor du kan kjøpe billige <br
+          />
+          brukte barneklær og dameklær i tillegg til brukte leker og barneutstyr
+        </p>
+        <div class="max-w-xl mx-auto block md:hidden mt-8">
+          <Link href="/booking" variant="primarysmall" target="_blank"
+            >Book en stand hos oss!</Link
+          >
+        </div>
+        <div class="max-w-xl mx-auto md:block hidden mt-8">
+          <Link href="/booking" variant="primary" target="_blank"
+            >Book en stand hos oss!</Link
+          >
+        </div>
       </div>
     </article>
-    <article class="bg-blaa-400 md:grid grid-cols-2 md:px-[105px] py-12 gap-8">
-      <div>
+    <article class="bg-blaa-400 md:grid grid-cols-5 md:px-[105px] py-12 gap-8">
+      <div class="col-span-3">
         <h2 class="pb-4">Gjenbruk på en ny og morsom måte!</h2>
         <p class="pb-4">
           Hos oss er det privatpersoner som selger sine brukte dame- og
@@ -44,7 +50,7 @@ import logo from "../assets/images/logo.svg";
           hos oss er avslappende for foreldre og gøy for barn.
         </p>
       </div>
-      <div class="bg-gul-400 rounded-3xl border-4 border-gronn-800 m-6">
+      <div class="bg-gul-400 rounded-3xl border-4 border-gronn-800 col-span-2">
         <Image src={logo} alt="" />
         <h3>Har du flere spørsmål?</h3>
         <div class="max-w-xl mx-auto block md:hidden">
@@ -104,7 +110,7 @@ import logo from "../assets/images/logo.svg";
     </article>
     <article class="bg-brun-100 grid grid-cols-5 md:px-[105px] py-12">
       <div class="col-span-3">
-        <h2>Visste du at...</h2>
+        <h2 class="pb-4">Visste du at...</h2>
         <p>
           Motebransjen bruker mye vann og kjemikalier, og er den bransjen som
           står for de nest høyeste utslippene i verden? <br /><span
