@@ -7,14 +7,38 @@ import thumbsup from "../assets/images/thumbsup.png";
 ---
 
 <MainLayout title="Om oss">
-  <article>
-    <h1>Index overskrift</h1>
-    <Button>Klik!</Button>
-    <p>
-      Link til <Link href="https://www.kea.dk" target="_blank"
-        >En anden side</Link
-      >
-    </p>
-    <Image src={thumbsup} alt="" />
-  </article>
+  <h1 class="text-center mb-8">Hvem er vi?</h1>
+  <section class="grid grid-cols-2 md:px-[105px] py-8">
+    <article class="col-span-1 order-2">
+      <p>
+        Siden jeg flyttet til Norge har jeg savnet en butikk hvor man kan kjøpe
+        gjenbrukte barneklær, som jeg gjerne hadde kjøpt til min datter som er
+        født i 2016. Konseptet er kjent i mitt hjemland Finland, og nå ønsker
+        jeg at alle familier i Norge får muligheten til å gjøre et bærekraftig
+        valg gjennom å velge gjenbrukte varer og samtidig spare penger. <br
+        />-Jonna, Green Kids gründer.<br />
+        <br />
+
+        Vi ønsker å gi nytt liv til dame- og barneklær, leker, bøker, bilseter,
+        barnevogner, mammaklær, mammautstyr… alt som du trenger når du har barn.
+        Når du handler hos Green Kids får du mye verdi for pengene samtidig som
+        du sparer miljøet! 
+        <br />
+        <br />
+        Vi gjør det enkelt for deg å selge dine brukte barneting hos Green Kids.
+        Du booker en stand på vår hjemmeside og setter opp salgsstanden din i butikken.
+        Du kan følge salget på Green Kids -kontoen din, og etter salgsperioden utbetaler
+        vi fortjenesten direkte til din bankkonto. Våre lokaler er på over 200 m2,
+        og ligger midt på Løren. <br />
+        <br />
+         Vi vet at det ikke er billig å ha barn. Vi får nye brukte varer hver uke,
+        og vi fokuserer på sesongvarer. Vi er super-users på sosial media og vi markedsfører
+        varer aktivt via våre Facebook og Instagram profiler! Så følg oss gjerne!
+        Vi ønsker deg hjertelig velkommen til Green Kids and Moms!
+      </p>
+    </article>
+    <article class="col-span-1 order-1">
+      <Image src={thumbsup} alt="" />
+    </article>
+  </section>
 </MainLayout>

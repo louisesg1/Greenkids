@@ -8,19 +8,29 @@ import faq from "../assets/images/faq.svg";
 ---
 
 <MainLayout title="FAQ">
-  <article>
-    <h1 class="text-center">FAQ</h1>
-    <section class="grid grid-cols-2">
-      <div class="order-2">
+  <section class="md:px-[105px] py-8">
+    <h1 class="text-center mb-8">Spørsmål og svar</h1>
+    <article class="grid grid-cols-3">
+      <div class="order-2 col-span-2">
+        <Accordion />
+        <Accordion />
+        <Accordion />
+        <Accordion />
+        <Accordion />
+        <Accordion />
+        <Accordion />
+        <Accordion />
+        <Accordion />
+        <Accordion />
         <Accordion />
         <Accordion />
         <Accordion />
         <Accordion />
         <Accordion />
       </div>
-      <div class="order-1 mx-auto">
+      <div class="order-1 mx-auto col-span-1">
         <Image src={faq} alt="" />
       </div>
-    </section>
-  </article>
+    </article>
+  </section>
 </MainLayout>
