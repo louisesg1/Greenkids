@@ -1,0 +1,88 @@
+---
+const { text = "karuselltekst" } = Astro.props;
+---
+
+<section
+  class="overflow-hidden whitespace-nowrap bg-rosa-400 py-4 text-gronn-800 font-sans font-normal text-lg"
+>
+  <article class="scrolling-text">
+    <span class="px-8">
+      {text}
+    </span>
+    <span class="px-8">
+      {text}
+    </span>
+    <span class="px-8">
+      {text}
+    </span>
+    <span class="px-8">
+      {text}
+    </span>
+    <span class="px-8">
+      {text}
+    </span>
+    <span class="px-8">
+      {text}
+    </span>
+    <span class="px-8">
+      {text}
+    </span>
+    <span class="px-8">
+      {text}
+    </span>
+    <span class="px-8">
+      {text}
+    </span>
+    <span class="px-8">
+      {text}
+    </span>
+  </article>
+
+  <article class="scrolling-text">
+    <span class="px-8">
+      {text}
+    </span>
+    <span class="px-8">
+      {text}
+    </span>
+    <span class="px-8">
+      {text}
+    </span>
+    <span class="px-8">
+      {text}
+    </span>
+    <span class="px-8">
+      {text}
+    </span>
+    <span class="px-8">
+      {text}
+    </span>
+    <span class="px-8">
+      {text}
+    </span>
+    <span class="px-8">
+      {text}
+    </span>
+    <span class="px-8">
+      {text}
+    </span>
+    <span class="px-8">
+      {text}
+    </span>
+  </article>
+</section>
+<style>
+  @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  .scrolling-text {
+    display: inline-block;
+    align-items: center;
+    animation: scroll 50s linear infinite;
+  }
+</style>
