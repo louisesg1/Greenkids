@@ -1,20 +1,21 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
-import Link from "../components/Link.astro";
+import Form from "../components/Form.astro";
 import { Image } from "astro:assets";
-import faq from "../assets/images/faq.svg";
+import logo from "../assets/images/logo.svg";
 ---
 
 <MainLayout title="Kontakt oss!">
-  <article>
-    <h1>Kontakt oss!</h1>
-    <Button variant="secondary">Send inn</Button>
-    <p>
-      Link til <Link href="https://www.kea.dk" target="_blank"
-        >En anden side</Link
-      >
-    </p>
-    <Image src={faq} alt="" />
-  </article>
+  <section class="md:px-[105px] mb-12">
+    <h1 class="text-center mb-8">Kontakt oss!</h1>
+    <article class="grid grid-cols-2">
+      <div class="flex flex-col items-center justify-center">
+        <Image src={logo} alt="" />
+      </div>
+      <div>
+        <Form />
+      </div>
+    </article>
+  </section>
 </MainLayout>

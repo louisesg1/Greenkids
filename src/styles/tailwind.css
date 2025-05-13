@@ -81,6 +81,8 @@
   --text-4xl--line-height: calc(5.5 / 5);
 
   --shadow-button: 5px 5px 0px var(--color-gronn-800);
+
+  --handcursor: url(../public/cursor.svg) 25 25, pointer;
 }
 
 @layer base {

@@ -7,7 +7,7 @@
     @click="open = !open"
     class="w-full flex justify-between items-center p-4 bg-gul-400 text-gronn-800"
   >
-    <span class="text-left font-sans"><p>[Spørsmål her]</p></span>
+    <span class="text-left font-sans"><p>Hvordan leier jeg en stand?</p></span>
     <svg
       class="w-4 h-4 transform transition-transform"
       :class="{ 'rotate-180': open }"
@@ -27,6 +27,599 @@
     x-collapse
     class="p-4 bg-gul-400 text-gronn-800 border-t border-gronn-800"
   >
-    <p>[Innhold]</p>
+    <p class="text-sm">
+      Du booker standen via nettsiden vår eller i butikken. Når du har en aktiv
+      booking, kommer du og setter opp standen – og vi tar oss av resten. Du kan
+      gjerne følge med på standen din underveis for å holde den ryddig og
+      etterfylle varer. Vi markedsfører også varer og stander i sosiale medier.
+    </p>
+  </div>
+</div>
+<div x-data="{ open: false }" class="max-w-3xl">
+  <button
+    @click="open = !open"
+    class="w-full flex justify-between items-center p-4 bg-gul-400 text-gronn-800"
+  >
+    <span class="text-left font-sans"
+      ><p>Hva koster det og hvordan betaler jeg?</p></span
+    >
+    <svg
+      class="w-4 h-4 transform transition-transform"
+      :class="{ 'rotate-180': open }"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+  <div
+    x-show="open"
+    x-collapse
+    class="p-4 bg-gul-400 text-gronn-800 border-t border-gronn-800"
+  >
+    <p class="text-sm">
+      Du betaler i butikken ved oppmøte. Booking er bindende og refunderes ikke.
+      Skulle du ikke kunne bruke den, kan du selge bookingen videre til noen
+      andre. Prisene inkluderer mva og står oppført på nettsiden.
+    </p>
+  </div>
+</div>
+<div x-data="{ open: false }" class="max-w-3xl">
+  <button
+    @click="open = !open"
+    class="w-full flex justify-between items-center p-4 bg-gul-400 text-gronn-800"
+  >
+    <span class="text-left font-sans"
+      ><p>Når kan jeg sette opp standen min?</p></span
+    >
+    <svg
+      class="w-4 h-4 transform transition-transform"
+      :class="{ 'rotate-180': open }"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+  <div
+    x-show="open"
+    x-collapse
+    class="p-4 bg-gul-400 text-gronn-800 border-t border-gronn-800"
+  >
+    <p class="text-sm">
+      Standen er klar for oppsett dagen før leieperioden starter, fra kl. 16
+      (kl. 14 på lørdager). Kom gjerne i god tid slik at du rekker å gjøre alt
+      klart. Du må være ferdig innen kl. 18 (kl. 16 på lørdager). Kommer du ikke
+      i tide, kan standen bli leid ut til andre, med mindre du gir beskjed.
+    </p>
+  </div>
+</div>
+<div x-data="{ open: false }" class="max-w-3xl">
+  <button
+    @click="open = !open"
+    class="w-full flex justify-between items-center p-4 bg-gul-400 text-gronn-800"
+  >
+    <span class="text-left font-sans"><p>Hva kan jeg selge?</p></span>
+    <svg
+      class="w-4 h-4 transform transition-transform"
+      :class="{ 'rotate-180': open }"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+  <div
+    x-show="open"
+    x-collapse
+    class="p-4 bg-gul-400 text-gronn-800 border-t border-gronn-800"
+  >
+    <p class="text-sm">Du kan selge:</p>
+    <ul>
+      <li>Moderne klær (maks 5 år gamle)</li>
+      <li>Dameklær (husk riktig sesong)</li>
+      <li>Barneklær (husk riktig sesong)</li>
+      <li>Håndlagde produkter</li>
+      <li>Luer, hansker og andre tilbehør</li>
+      <li>Sko for sesongen</li>
+      <li>Reise/trillevogner (ikke store vogner)</li>
+      <li>Luksusprodukter (vi har skap med lås)</li>
+      <li>Leker (store og små)</li>
+      <li>Spill og puslespill</li>
+      <li>Bøker</li>
+      <li>Barnekostymer</li>
+      <li>Sparkesykler / balansesykler</li>
+      <li>Babyprodukter</li>
+      <li>Graviditets- og ammeprodukter</li>
+      <li>Brystpumper og flasker</li>
+      <li>Bæreseler o.l.</li>
+      <li>Stoffbleier</li>
+      <li>Håndklær og badekåper for barn</li>
+      <li>Andre produkter relatert til barn</li>
+    </ul>
+  </div>
+</div>
+<div x-data="{ open: false }" class="max-w-3xl">
+  <button
+    @click="open = !open"
+    class="w-full flex justify-between items-center p-4 bg-gul-400 text-gronn-800"
+  >
+    <span class="text-left font-sans"><p>Hva kan jeg ikke selge?</p></span>
+    <svg
+      class="w-4 h-4 transform transition-transform"
+      :class="{ 'rotate-180': open }"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+  <div
+    x-show="open"
+    x-collapse
+    class="p-4 bg-gul-400 text-gronn-800 border-t border-gronn-800"
+  >
+    <p class="text-sm">Du kan ikke selge:</p>
+    <ul>
+      <li>Produkter som ikke passer årstiden</li>
+      <li>Uvaskede klær</li>
+      <li>Klær som er mer enn 5 år gamle</li>
+      <li>Slitte klær</li>
+      <li>Klær med dyrehår</li>
+      <li>Uknappede klær</li>
+      <li>Slitte eller ødelagte sko</li>
+      <li>Klær med muggen lukt</li>
+      <li>Turistprodukter</li>
+      <li>Falske produkter</li>
+      <li>Herreklær</li>
+      <li>Store barnevogner</li>
+    </ul>
+  </div>
+</div>
+<div x-data="{ open: false }" class="max-w-3xl">
+  <button
+    @click="open = !open"
+    class="w-full flex justify-between items-center p-4 bg-gul-400 text-gronn-800"
+  >
+    <span class="text-left font-sans"
+      ><p>Hvor lang tid tar det å sette opp standen?</p></span
+    >
+    <svg
+      class="w-4 h-4 transform transition-transform"
+      :class="{ 'rotate-180': open }"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+  <div
+    x-show="open"
+    x-collapse
+    class="p-4 bg-gul-400 text-gronn-800 border-t border-gronn-800"
+  >
+    <p class="text-sm">
+      Har du laget prislapper hjemme, tar det ca. 30–60 minutter. Skal du skrive
+      prislappene manuelt i butikken, anbefaler vi å sette av ca. 2 timer.
+    </p>
+  </div>
+</div>
+<div x-data="{ open: false }" class="max-w-3xl">
+  <button
+    @click="open = !open"
+    class="w-full flex justify-between items-center p-4 bg-gul-400 text-gronn-800"
+  >
+    <span class="text-left font-sans"
+      ><p>Kan jeg dele standen med en venn?</p></span
+    >
+    <svg
+      class="w-4 h-4 transform transition-transform"
+      :class="{ 'rotate-180': open }"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+  <div
+    x-show="open"
+    x-collapse
+    class="p-4 bg-gul-400 text-gronn-800 border-t border-gronn-800"
+  >
+    <p class="text-sm">
+      Ja! Gi beskjed til oss i kassen. Vi ordner egne prislapper og
+      salgsovervåkning for hver av dere. Når man deler en stand bør hver selger
+      ha minst 15 varer.
+    </p>
+  </div>
+</div><div x-data="{ open: false }" class="max-w-3xl">
+  <button
+    @click="open = !open"
+    class="w-full flex justify-between items-center p-4 bg-gul-400 text-gronn-800"
+  >
+    <span class="text-left font-sans"
+      ><p>Hvordan ser en stand ut, og hvor mye får jeg plass til?</p></span
+    >
+    <svg
+      class="w-4 h-4 transform transition-transform"
+      :class="{ 'rotate-180': open }"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+  <div
+    x-show="open"
+    x-collapse
+    class="p-4 bg-gul-400 text-gronn-800 border-t border-gronn-800"
+  >
+    <p class="text-sm">
+      Hver stand har plass til 30–40 hengere (avhengig av størrelsen på klærne),
+      samt to hyller (ca. 80x40 cm). Du kan pynte standen din og bruke kurver
+      eller esker, så lenge det ikke lager merker på møblene. Hengere og klemmer
+      får du låne av oss.
+    </p>
+  </div>
+</div><div x-data="{ open: false }" class="max-w-3xl">
+  <button
+    @click="open = !open"
+    class="w-full flex justify-between items-center p-4 bg-gul-400 text-gronn-800"
+  >
+    <span class="text-left font-sans"><p>Hvordan lager jeg prislapper?</p></span
+    >
+    <svg
+      class="w-4 h-4 transform transition-transform"
+      :class="{ 'rotate-180': open }"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+  <div
+    x-show="open"
+    x-collapse
+    class="p-4 bg-gul-400 text-gronn-800 border-t border-gronn-800"
+  >
+    <p class="text-sm">
+      Du kan velge mellom manuelle og digitale prislapper. <br />
+      <br />Manuelle: Vi gir deg et ark med 65 strekkodeklistremerker som du
+      skriver pris og størrelse på med penn. <br /><br />Digitale (anbefalt for
+      dameklær): Du får en lenke til registrering av varer, og vi printer ut et
+      helt ark når det er klart. Digitale lapper gir deg bedre oversikt i
+      systemet. <br /><br />Du får ett prisark per uke inkludert. Ekstra koster
+      10 kr per stk.
+    </p>
+  </div>
+</div><div x-data="{ open: false }" class="max-w-3xl">
+  <button
+    @click="open = !open"
+    class="w-full flex justify-between items-center p-4 bg-gul-400 text-gronn-800"
+  >
+    <span class="text-left font-sans"><p>Hvordan velger jeg pris?</p></span>
+    <svg
+      class="w-4 h-4 transform transition-transform"
+      :class="{ 'rotate-180': open }"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+  <div
+    x-show="open"
+    x-collapse
+    class="p-4 bg-gul-400 text-gronn-800 border-t border-gronn-800"
+  >
+    <p class="text-sm">
+      Vi anbefaler å sette prisen til ca. 1/3 av opprinnelig nypris. Unike varer
+      og merker kan gjerne prises opptil 50 %, så lenge de er i god stand.
+    </p>
+  </div>
+</div><div x-data="{ open: false }" class="max-w-3xl">
+  <button
+    @click="open = !open"
+    class="w-full flex justify-between items-center p-4 bg-gul-400 text-gronn-800"
+  >
+    <span class="text-left font-sans"
+      ><p>Kan jeg ha tilbud eller rabatt på standen min?</p></span
+    >
+    <svg
+      class="w-4 h-4 transform transition-transform"
+      :class="{ 'rotate-180': open }"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+  <div
+    x-show="open"
+    x-collapse
+    class="p-4 bg-gul-400 text-gronn-800 border-t border-gronn-800"
+  >
+    <p class="text-sm">
+      Ja! Du kan sette 20–75 % rabatt på standen din. Kom innom oss, så ordner
+      vi skilting og registrering i systemet.
+    </p>
+  </div>
+</div><div x-data="{ open: false }" class="max-w-3xl">
+  <button
+    @click="open = !open"
+    class="w-full flex justify-between items-center p-4 bg-gul-400 text-gronn-800"
+  >
+    <span class="text-left font-sans"
+      ><p>Hvordan markedsføres standen min?</p></span
+    >
+    <svg
+      class="w-4 h-4 transform transition-transform"
+      :class="{ 'rotate-180': open }"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+  <div
+    x-show="open"
+    x-collapse
+    class="p-4 bg-gul-400 text-gronn-800 border-t border-gronn-800"
+  >
+    <p class="text-sm">
+      Vi deler varer på Instagram og Facebook. Du kan også poste selv i gruppa
+      vår: Kjøp og Salg Green Kids & Moms Løren, og tagge oss. Jo mer synlighet,
+      jo bedre salg!
+    </p>
+  </div>
+</div><div x-data="{ open: false }" class="max-w-3xl">
+  <button
+    @click="open = !open"
+    class="w-full flex justify-between items-center p-4 bg-gul-400 text-gronn-800"
+  >
+    <span class="text-left font-sans"><p>Hvordan blir jeg betalt?</p></span>
+    <svg
+      class="w-4 h-4 transform transition-transform"
+      :class="{ 'rotate-180': open }"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+  <div
+    x-show="open"
+    x-collapse
+    class="p-4 bg-gul-400 text-gronn-800 border-t border-gronn-800"
+  >
+    <p class="text-sm">
+      Du får 80 % av salget ditt utbetalt direkte til din konto. Vi har
+      utbetaling i to perioder per måned, etter den 15. og etter månedsslutt.
+    </p>
+  </div>
+</div><div x-data="{ open: false }" class="max-w-3xl">
+  <button
+    @click="open = !open"
+    class="w-full flex justify-between items-center p-4 bg-gul-400 text-gronn-800"
+  >
+    <span class="text-left font-sans"
+      ><p>Hva skjer hvis jeg ikke tømmer standen i tide?</p></span
+    >
+    <svg
+      class="w-4 h-4 transform transition-transform"
+      :class="{ 'rotate-180': open }"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+  <div
+    x-show="open"
+    x-collapse
+    class="p-4 bg-gul-400 text-gronn-800 border-t border-gronn-800"
+  >
+    <p class="text-sm">
+      Du må tømme standen senest kl. 16 siste dag av leieperioden (kl. 14 på
+      lørdager). Hvis du ikke rekker det, kan du kjøpe ryddetjeneste (150 kr
+      avtalt på forhånd, 300 kr uten avtale). Oppbevaring etter leieperioden
+      koster 50 kr/dag. Alle varer må ha prislapp ved utsjekk.
+    </p>
+  </div>
+</div><div x-data="{ open: false }" class="max-w-3xl">
+  <button
+    @click="open = !open"
+    class="w-full flex justify-between items-center p-4 bg-gul-400 text-gronn-800"
+  >
+    <span class="text-left font-sans"
+      ><p>Hva skjer hvis noe blir gjenglemt eller stjålet?</p></span
+    >
+    <svg
+      class="w-4 h-4 transform transition-transform"
+      :class="{ 'rotate-180': open }"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+  <div
+    x-show="open"
+    x-collapse
+    class="p-4 bg-gul-400 text-gronn-800 border-t border-gronn-800"
+  >
+    <p class="text-sm">
+      Vi har videoovervåking og gjør vårt beste for å unngå tyveri. Vi anbefaler
+      alarm på varer over 100 kr – og alltid på dameklær. Vi kan dessverre ikke
+      erstatte varer som blir stjålet, mistet eller ødelagt.
+    </p>
+  </div>
+</div><div x-data="{ open: false }" class="max-w-3xl">
+  <button
+    @click="open = !open"
+    class="w-full flex justify-between items-center p-4 bg-gul-400 text-gronn-800"
+  >
+    <span class="text-left font-sans"
+      ><p>Kan jeg leie standen over lengre tid?</p></span
+    >
+    <svg
+      class="w-4 h-4 transform transition-transform"
+      :class="{ 'rotate-180': open }"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+  <div
+    x-show="open"
+    x-collapse
+    class="p-4 bg-gul-400 text-gronn-800 border-t border-gronn-800"
+  >
+    <p class="text-sm">
+      Ja! Du kan ha langtidsleie så lenge du vil, så lenge standen er aktiv
+      (minst 800 kr i ukentlig salg) og du følger den opp. Vi gir beskjed hvis
+      endringer trengs. Oppsigelsestid ved langtidsleie er 7 dager.
+    </p>
+  </div>
+</div><div x-data="{ open: false }" class="max-w-3xl">
+  <button
+    @click="open = !open"
+    class="w-full flex justify-between items-center p-4 bg-gul-400 text-gronn-800"
+  >
+    <span class="text-left font-sans"><p>Er det skattefritt å selge?</p></span>
+    <svg
+      class="w-4 h-4 transform transition-transform"
+      :class="{ 'rotate-180': open }"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+  <div
+    x-show="open"
+    x-collapse
+    class="p-4 bg-gul-400 text-gronn-800 border-t border-gronn-800"
+  >
+    <p class="text-sm">
+      Ja, du selger skattefritt når du selger dine egne, brukte ting som
+      privatperson. Selger du som bedrift, må dette registreres ved booking og
+      vanlige regler for moms og skatt gjelder.
+    </p>
+  </div>
+</div>
+<div x-data="{ open: false }" class="max-w-3xl">
+  <button
+    @click="open = !open"
+    class="w-full flex justify-between items-center p-4 bg-gul-400 text-gronn-800"
+  >
+    <span class="text-left font-sans"
+      ><p>Hvordan behandles min personlige informasjon?</p></span
+    >
+    <svg
+      class="w-4 h-4 transform transition-transform"
+      :class="{ 'rotate-180': open }"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+  <div
+    x-show="open"
+    x-collapse
+    class="p-4 bg-gul-400 text-gronn-800 border-t border-gronn-800"
+  >
+    <p class="text-sm">
+      Vi deler aldri personlig informasjon med tredjeparter uten ditt samtykke,
+      og all informasjon behandles konfidensielt i henhold til gjeldende
+      personvernlovgivning.
+    </p>
   </div>
 </div>
