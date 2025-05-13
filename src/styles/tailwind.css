@@ -106,7 +106,7 @@
     font-family: 'Bricolage Grotesque', sans-serif;
     font-size: var(--text-2xl);
     line-height: var(--text-2xl--line-height);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-normal);
     color: var(--color-gronn-800);
   }
 
