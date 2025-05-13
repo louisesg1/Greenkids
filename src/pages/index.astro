@@ -3,9 +3,11 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import Banner from "../components/Banner.astro";
+import Anmeldelser from "../components/Anmeldelser.astro";
 import { Image } from "astro:assets";
 import logo from "../assets/images/logo.svg";
 import hero from "../assets/images/hero.svg";
+import blomst from "../assets/images/blomst1.svg";
 ---
 
 <MainLayout title="Green Kids and Moms">
@@ -33,7 +35,7 @@ import hero from "../assets/images/hero.svg";
         </div>
       </div>
     </article>
-    <article class="bg-blaa-400 md:grid grid-cols-5 md:px-[105px] py-12 gap-8">
+    <article class="bg-blaa-400 md:grid grid-cols-5 md:px-[105px] py-12 gap-12">
       <div class="col-span-3">
         <h2 class="pb-4">Gjenbruk på en ny og morsom måte!</h2>
         <p class="pb-4">
@@ -66,17 +68,19 @@ import hero from "../assets/images/hero.svg";
         </div>
       </div>
     </article>
-    <Banner text="Kun 250kr / uke" />
+    <a href="/booking">
+      <Banner text="Kun 250kr / uke" />
+    </a>
     <article class="bg-rosa-200 md:px-[105px] py-12">
       <h2 class="text-center">Book en stand hos oss!</h2>
     </article>
-    <article class="md:px-[105px] py-8">
+    <article class="py-8">
       <h2 class="text-center">Hold deg oppdatert!</h2>
-      <p class="">
+      <p class="md:px-[315px]">
         Vi er aktive på instagram, og vi poster daglige stories av varene som vi
         har til salgs.
       </p>
-      <p>instagram grid</p>
+      <div class="grid grid-cols-3"></div>
       <div class="max-w-xl mx-auto block md:hidden my-8">
         <Link
           href="https://www.instagram.com/greenkidsmoms/"
@@ -91,7 +95,7 @@ import hero from "../assets/images/hero.svg";
           target="_blank">Følg oss på Instagram!</Link
         >
       </div>
-      <p>
+      <p class="md:px-[315px]">
         Vi har også en egen markedsplass på Facebook, hvor du kan se når det
         kommer nye stands. Der kan du også skrive selv, om du er interessert i å
         kjøpe noe spesielt. Markedsplassen heter:
@@ -111,29 +115,46 @@ import hero from "../assets/images/hero.svg";
         >
       </div>
     </article>
-    <article class="bg-brun-100 grid grid-cols-5 md:px-[105px] py-12">
+    <article class="bg-brun-100 md:grid grid-cols-5 md:px-[105px] py-12 gap-12">
       <div class="col-span-3">
         <h2 class="pb-4">Visste du at...</h2>
         <p>
           Motebransjen bruker mye vann og kjemikalier, og er den bransjen som
-          står for de nest høyeste utslippene i verden? <br /><span
+          står for de nest høyeste utslippene i verden? <br /><br /><span
             class="font-bold text-lg"
             >Bare oljeproduksjonen har større utslipp og skader miljøet mer!
-          </span><br />Vil du hjelpe med å redusere mengden utslipp, og hjelpe
-          til med å skape en renere fremtid for våre barn? Gjennom å velge
-          gjenbrukte varer tar du et bevisst miljøvalg, og sparer miljøet for
-          unødvendige utslipp! <br /><span class="font-bold text-lg"
+          </span><br /><br />Vil du hjelpe med å redusere mengden utslipp, og
+          hjelpe til med å skape en renere fremtid for våre barn? Gjennom å
+          velge gjenbrukte varer tar du et bevisst miljøvalg, og sparer miljøet
+          for unødvendige utslipp! <br /><br /><span class="font-bold text-lg"
             >Det er vi veldig takknemlige for!</span
           >
         </p>
       </div>
-      <div class="col-span-2">
-        <p>ramme med blomst</p>
+      <div
+        class="bg-gul-400 rounded-3xl border-4 border-gronn-800 col-span-2 flex flex-col items-center justify-center text-center"
+      >
+        <Image src={blomst} alt="logo" class="max-h-[80%]" />
       </div>
     </article>
     <article class="md:px-[105px] py-8">
-      <h2 class="text-center">Anmeldelser fra våre kunder</h2>
-      <div class="grid-cols-3"></div>
+      <h2 class="text-center mb-8">Anmeldelser fra våre kunder</h2>
+      <div class="md:grid grid-cols-3 gap-8">
+        <Anmeldelser
+          ><span slot="navn"><h3>Navn navnesen</h3></span><span slot="tekst"
+            ><p>Dette er innhold</p></span
+          ></Anmeldelser
+        >
+        <Anmeldelser
+          ><span slot="navn"><h3>Navn navnesen</h3></span><span slot="tekst"
+            ><p>Dette er innhold</p></span
+          ></Anmeldelser
+        ><Anmeldelser
+          ><span slot="navn"><h3>Navn navnesen</h3></span><span slot="tekst"
+            ><p>Dette er innhold</p></span
+          ></Anmeldelser
+        >
+      </div>
     </article>
   </section>
 </MainLayout>
