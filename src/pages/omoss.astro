@@ -3,7 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
-import thumbsup from "../assets/images/thumbsup.png";
+import logo from "../assets/images/logo.svg";
 ---
 
 <MainLayout title="Om oss">
@@ -37,8 +37,10 @@ import thumbsup from "../assets/images/thumbsup.png";
         Vi ønsker deg hjertelig velkommen til Green Kids and Moms!
       </p>
     </article>
-    <article class="col-span-1 order-1">
-      <Image src={thumbsup} alt="" />
+    <article
+      class="col-span-1 order-1 flex flex-col items-center justify-center"
+    >
+      <Image src={logo} alt="" />
     </article>
   </section>
 </MainLayout>
