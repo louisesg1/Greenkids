@@ -1,0 +1,52 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import blomst from "../assets/images/blomst1.svg";
+import bjorn from "../assets/images/norge.svg";
+---
+
+<MainLayout title="Blogg">
+  <article>
+    <h1 class="text-center mb-8">Blogg, nyheter, aktuelt?</h1>
+    <article class="md:px-[105px]">
+      <h2 class="text-center mb-8">Ikke helt klar til 17 mai?</h2>
+      <div class="grid grid-cols-2">
+        <div class="flex justify-center">
+          <Image src={bjorn} alt="bjoern" class="max-h-[80%]" />
+        </div>
+        <div>
+          <p>
+            Kom innom Green Kids and moms! Vi har et bredt utvalg av
+            festdrakter, bunader, bunadssko, flagg og mer til både mamma og
+            barn. Har du hatt stand hos oss før og vil selge noe 17-mai
+            relatert? Da kan du selge hos oss uten å booke stand!
+          </p>
+        </div>
+      </div>
+    </article>
+    <article class="bg-brun-100 md:grid grid-cols-5 md:px-[105px] py-12 gap-22">
+      <div class="col-span-3">
+        <h2 class="mb-4">Visste du at...</h2>
+        <p>
+          Motebransjen bruker mye vann og kjemikalier, og er den bransjen som
+          står for de nest høyeste utslippene i verden? <br /><br /><span
+            class="font-bold text-lg"
+            >Bare oljeproduksjonen har større utslipp og skader miljøet mer!
+          </span><br /><br />Vil du hjelpe med å redusere mengden utslipp, og
+          hjelpe til med å skape en renere fremtid for våre barn? Gjennom å
+          velge gjenbrukte varer tar du et bevisst miljøvalg, og sparer miljøet
+          for unødvendige utslipp! <br /><br /><span class="font-bold text-lg"
+            >Det er vi veldig takknemlige for!</span
+          >
+        </p>
+      </div>
+      <div
+        class="bg-gul-400 rounded-3xl border-4 border-gronn-800 col-span-2 flex flex-col items-center justify-center text-center"
+      >
+        <Image src={blomst} alt="blomst" class="max-h-[80%]" />
+      </div>
+    </article>
+  </article>
+</MainLayout>

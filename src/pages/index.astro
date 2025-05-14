@@ -4,10 +4,10 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import Banner from "../components/Banner.astro";
 import Anmeldelser from "../components/Anmeldelser.astro";
+import Card from "../components/Gjordetselv.astro";
 import { Image } from "astro:assets";
 import logo from "../assets/images/logo.svg";
 import hero from "../assets/images/hero.svg";
-import blomst from "../assets/images/blomst1.svg";
 ---
 
 <MainLayout title="Green Kids and Moms">
@@ -35,7 +35,9 @@ import blomst from "../assets/images/blomst1.svg";
         </div>
       </div>
     </article>
-    <article class="bg-blaa-400 md:grid grid-cols-5 md:px-[105px] py-12 gap-22">
+    <article
+      class="bg-blaa-400 md:grid grid-cols-5 md:px-[105px] pt-12 pb-20 gap-22"
+    >
       <div class="col-span-3">
         <h2 class="pb-4">Gjenbruk på en ny og morsom måte!</h2>
         <p class="pb-4">
@@ -71,10 +73,61 @@ import blomst from "../assets/images/blomst1.svg";
     <a href="/booking">
       <Banner text="Kun 250kr / uke" />
     </a>
-    <article class="bg-rosa-200 md:px-[105px] py-12">
-      <h2 class="text-center">Book en stand hos oss!</h2>
+    <article class="pt-12 pb-20">
+      <h2 class="text-center mb-4">Gjør det selv!</h2>
+      <div class="grid grid-cols-4 md:px-[105px]">
+        <div class="flex flex-col">
+          <Card>
+            <Image src={logo} slot="bilde" alt="logo" class="max-w-[60%]" />
+            <span slot="overskrift">Steg 1</span>
+            <span slot="tekst"
+              >Book en stand hos oss via vår nettside, direkte i butikken eller
+              via mail. Betaling skjer fysisk i butikk. Husk at barne- og
+              voksenklær ikke kan blandes på en stand!</span
+            >
+          </Card>
+          <div class="self-center">
+            <Link href="/booking" variant="primarysmall" target="_blank"
+              >Book en stand!</Link
+            >
+          </div>
+        </div>
+        <div>
+          <Card>
+            <Image src={logo} slot="bilde" alt="logo" class="max-w-[60%]" />
+            <span slot="overskrift">Steg 2</span>
+            <span slot="tekst"
+              >Finn frem det du vil selge og gjør det klart for salg. Husk at
+              klær skal være rene når de henges opp i butikken. Du kan også
+              hente og lage prislapper før du setter opp standen.</span
+            >
+          </Card>
+        </div>
+        <div>
+          <Card>
+            <Image src={logo} slot="bilde" alt="logo" class="max-w-[60%]" />
+            <span slot="overskrift">Steg 3</span>
+            <span slot="tekst"
+              >Ta klærne med til butikk, gjør ferdig prislapper og heng opp
+              klærne. Du får kleshengere av oss, og også alarmer for alle varer
+              over 100kr. Ta bilde av standen og publiser på vår facebookside.</span
+            >
+          </Card>
+        </div>
+        <div>
+          <Card>
+            <Image src={logo} slot="bilde" alt="logo" class="max-w-[60%]" />
+            <span slot="overskrift">Steg 4</span>
+            <span slot="tekst"
+              >Tøm standen når leieperioden er over eller lei en ryddetjeneste
+              av oss. Deretter betaler vi fortjenesten til din konto i løpet av
+              15 dager.
+            </span>
+          </Card>
+        </div>
+      </div>
     </article>
-    <article class="py-8">
+    <article class="pt-12 pb-20 bg-rosa-100">
       <h2 class="text-center">Hold deg oppdatert!</h2>
       <p class="md:px-[315px]">
         Vi er aktive på instagram, og vi poster daglige stories av varene som vi
@@ -101,6 +154,11 @@ import blomst from "../assets/images/blomst1.svg";
         kommer nye stands. Der kan du også skrive selv, om du er interessert i å
         kjøpe noe spesielt. Markedsplassen heter:
       </p>
+      <a
+        class="text-center hover:underline pt-8"
+        href="https://www.facebook.com/groups/606130270229521"
+        ><h5>Kjøp og salg Green Kids & Moms Løren</h5></a
+      >
       <div class="flex justify-center">
         <div class="max-w-xl mx-auto block md:hidden my-8">
           <Link
@@ -118,29 +176,7 @@ import blomst from "../assets/images/blomst1.svg";
         </div>
       </div>
     </article>
-    <article class="bg-brun-100 md:grid grid-cols-5 md:px-[105px] py-12 gap-22">
-      <div class="col-span-3">
-        <h2 class="pb-4">Visste du at...</h2>
-        <p>
-          Motebransjen bruker mye vann og kjemikalier, og er den bransjen som
-          står for de nest høyeste utslippene i verden? <br /><br /><span
-            class="font-bold text-lg"
-            >Bare oljeproduksjonen har større utslipp og skader miljøet mer!
-          </span><br /><br />Vil du hjelpe med å redusere mengden utslipp, og
-          hjelpe til med å skape en renere fremtid for våre barn? Gjennom å
-          velge gjenbrukte varer tar du et bevisst miljøvalg, og sparer miljøet
-          for unødvendige utslipp! <br /><br /><span class="font-bold text-lg"
-            >Det er vi veldig takknemlige for!</span
-          >
-        </p>
-      </div>
-      <div
-        class="bg-gul-400 rounded-3xl border-4 border-gronn-800 col-span-2 flex flex-col items-center justify-center text-center"
-      >
-        <Image src={blomst} alt="logo" class="max-h-[80%]" />
-      </div>
-    </article>
-    <article class="md:px-[105px] py-8">
+    <article class="md:px-[105px] pt-12 pb-20">
       <h2 class="text-center mb-8">Anmeldelser fra våre kunder</h2>
       <div class="md:grid grid-cols-3 gap-8 mb-8">
         <Anmeldelser

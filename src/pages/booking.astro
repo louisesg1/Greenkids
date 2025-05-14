@@ -2,17 +2,54 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
+import Card from "../components/Gjordetselv.astro";
 import { Image } from "astro:assets";
+import logo from "../assets/images/logo.svg";
 ---
 
 <MainLayout title="Book en stand!">
   <article>
-    <h1>Book en stand!</h1>
+    <h1 class="text-center mb-8">Book en stand!</h1>
 
-    <p>
-      Link til <Link href="https://www.kea.dk" target="_blank"
-        >En anden side</Link
-      >
-    </p>
+    <p>Natural language form</p>
+    <h2 class="text-center mb-4">Gjør det selv!</h2>
+    <div class="grid grid-cols-4 md:px-[105px]">
+      <Card>
+        <Image src={logo} slot="bilde" alt="logo" class="max-w-[60%]" />
+        <span slot="overskrift">Steg 1</span>
+        <span slot="tekst"
+          >Book en stand hos oss via vår nettside, direkte i butikken eller via
+          mail. Betaling skjer fysisk i butikk. Husk at barne- og voksenklær
+          ikke kan blandes på en stand!</span
+        >
+      </Card>
+      <Card>
+        <Image src={logo} slot="bilde" alt="logo" class="max-w-[60%]" />
+        <span slot="overskrift">Steg 2</span>
+        <span slot="tekst"
+          >Finn frem det du vil selge og gjør det klart for salg. Husk at klær
+          skal være rene når de henges opp i butikken. Du kan også hente og lage
+          prislapper før du setter opp standen.</span
+        >
+      </Card>
+      <Card>
+        <Image src={logo} slot="bilde" alt="logo" class="max-w-[60%]" />
+        <span slot="overskrift">Steg 3</span>
+        <span slot="tekst"
+          >Ta klærne med til butikk, gjør ferdig prislapper og heng opp klærne.
+          Du får kleshengere av oss, og også alarmer for alle varer over 100kr.
+          Ta bilde av standen og publiser på vår facebookside.</span
+        >
+      </Card>
+      <Card>
+        <Image src={logo} slot="bilde" alt="logo" class="max-w-[60%]" />
+        <span slot="overskrift">Steg 4</span>
+        <span slot="tekst"
+          >Tøm standen når leieperioden er over eller lei en ryddetjeneste av
+          oss. Deretter betaler vi fortjenesten til din konto i løpet av 15
+          dager.
+        </span>
+      </Card>
+    </div>
   </article>
 </MainLayout>
