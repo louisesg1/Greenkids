@@ -126,7 +126,7 @@
     color: var(--color-gronn-800);
   }
 
-  p {
+  p, a {
     font-family: 'Manrope', sans-serif;
     font-size: var(--text-base);
     line-height: var(--text-base--line-height);
