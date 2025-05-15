@@ -2,7 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
-import Card from "../components/Gjordetselv.astro";
+import Priser from "../components/Priser.astro";
 import { Image } from "astro:assets";
 import logo from "../assets/images/logo.svg";
 ---
@@ -10,9 +10,50 @@ import logo from "../assets/images/logo.svg";
 <MainLayout title="Book en stand!">
   <article>
     <h1 class="text-center mb-8">Book en stand!</h1>
-
-    <p>Natural language form</p>
-    <h2 class="text-center mb-4">Gjør det selv!</h2>
-    <div class="grid grid-cols-4 md:px-[105px]"></div>
+    <p>
+      *Standleie kan begynne hvilken ukedag som helst og regnes feks man-man,
+      ons-ons & tors-tors. Vi tar en provisjon på 20%
+    </p>
+    <h2 class="text-center mb-8">Hvor lenge vil du booke?</h2>
+    <Priser>
+      <span slot="overskrift">17 mai-uken (BEGRENSET)</span>
+      <span slot="pris">GRATIS</span>
+      <span slot="tekst">
+        Har du hatt stand hos oss før og vil selge noe 17-mai relatert? Da kan
+        du selge hos oss uten å booke stand!
+      </span></Priser
+    >
+    <Priser>
+      <span slot="overskrift">Én uke</span>
+      <span slot="pris">250 kr</span>
+      <span slot="tekst">
+        6 dager i bookingkalender da søndag ikke regnes med. Prisen inkluderer
+        kleshengere, merkelapper og eksponering i butikk.
+      </span></Priser
+    >
+    <Priser>
+      <span slot="overskrift">To uker</span>
+      <span slot="pris">250 kr</span>
+      <span slot="tekst">
+        13 dager i bookingkalender da søndag ikke regnes med.
+      </span></Priser
+    >
+    <Priser>
+      <span slot="overskrift">Tre uker</span>
+      <span slot="pris">250 kr</span>
+      <span slot="tekst"> 19 dager </span></Priser
+    >
+    <Priser>
+      <span slot="overskrift">En måned</span>
+      <span slot="pris">250 kr</span>
+      <span slot="tekst"> 25 dager </span></Priser
+    >
+    <Priser>
+      <span slot="overskrift">Én dag</span>
+      <span slot="pris">36 kr</span>
+      <span slot="tekst">
+        Prisen inkluderer kleshengere, merkelapper og eksponering i butikk.
+      </span></Priser
+    >
   </article>
 </MainLayout>
