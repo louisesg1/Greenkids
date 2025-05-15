@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import Banner from "../components/Banner.astro";
+import Insta from "../components/Instagram.astro";
 import Anmeldelser from "../components/Anmeldelser.astro";
 import Card from "../components/Gjordetselv.astro";
 import { Image } from "astro:assets";
@@ -128,12 +129,25 @@ import hero from "../assets/images/hero.svg";
       </div>
     </article>
     <article class="pt-12 pb-20 bg-rosa-100">
-      <h2 class="text-center">Hold deg oppdatert!</h2>
-      <p class="md:px-[315px]">
+      <h2 class="text-center mb-8">Hold deg oppdatert!</h2>
+      <p class="md:px-[315px] mb-8">
         Vi er aktive på instagram, og vi poster daglige stories av varene som vi
         har til salgs.
       </p>
-      <div class="flex justify-center">
+      <div class="flex justify-center mb-8">
+        <div class="grid grid-cols-3 gap-4">
+          <Insta />
+          <Insta />
+          <Insta />
+          <Insta />
+          <Insta />
+          <Insta />
+          <Insta />
+          <Insta />
+          <Insta />
+        </div>
+      </div>
+      <div class="flex justify-center mb-8">
         <div class="max-w-xl mx-auto block md:hidden my-8">
           <Link
             href="https://www.instagram.com/greenkidsmoms/"
@@ -149,13 +163,13 @@ import hero from "../assets/images/hero.svg";
           >
         </div>
       </div>
-      <p class="md:px-[315px]">
+      <p class="md:px-[315px] mb-8">
         Vi har også en egen markedsplass på Facebook, hvor du kan se når det
         kommer nye stands. Der kan du også skrive selv, om du er interessert i å
         kjøpe noe spesielt. Markedsplassen heter:
       </p>
       <a
-        class="text-center hover:underline pt-8"
+        class="text-center hover:underline"
         href="https://www.facebook.com/groups/606130270229521"
         ><h5>Kjøp og salg Green Kids & Moms Løren</h5></a
       >

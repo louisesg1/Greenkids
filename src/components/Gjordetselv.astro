@@ -4,9 +4,7 @@ import { Image } from "astro:assets";
 import stjerne from "../assets/images/stjerne.svg";
 ---
 
-<div
-  class="flex flex-col items-center p-8 gap-4 hover:scale-110 transition-hover duration-150"
->
+<div class="flex flex-col items-center p-8 gap-4">
   <slot name="bilde" />
   <h3><slot name="overskrift" /></h3>
   <p class="text-sm"><slot name="tekst" /></p>

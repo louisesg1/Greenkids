@@ -3,15 +3,15 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Form from "../components/Form.astro";
 import { Image } from "astro:assets";
-import logo from "../assets/images/logo.svg";
+import brev from "../assets/images/brev.svg";
 ---
 
 <MainLayout title="Kontakt oss!">
-  <section class="md:px-[105px] mb-12">
+  <section class="md:px-[105px] mb-22">
     <h1 class="text-center mb-8">Kontakt oss!</h1>
     <article class="grid grid-cols-2">
       <div class="flex flex-col items-center justify-center">
-        <Image src={logo} alt="" />
+        <Image src={brev} alt="" />
       </div>
       <div>
         <Form />
