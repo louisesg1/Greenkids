@@ -2,6 +2,8 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
+import Anmeldelser from "../components/Anmeldelser.astro";
+import Insta from "../components/Instagram.astro";
 import { Image } from "astro:assets";
 import blomst from "../assets/images/blomst1.svg";
 import bjorn from "../assets/images/norge.svg";
@@ -9,7 +11,7 @@ import bjorn from "../assets/images/norge.svg";
 
 <MainLayout title="Blogg">
   <article>
-    <h1 class="text-center mb-8">Blogg, nyheter, aktuelt?</h1>
+    <h1 class="text-center mb-8">Siste nytt fra oss</h1>
     <article class="md:px-[105px]">
       <h2 class="text-center mb-8">Ikke helt klar til 17 mai?</h2>
       <div class="grid grid-cols-2">
@@ -18,11 +20,23 @@ import bjorn from "../assets/images/norge.svg";
         </div>
         <div>
           <p>
-            Kom innom Green Kids and moms! Vi har et bredt utvalg av
-            festdrakter, bunader, bunadssko, flagg og mer til både mamma og
-            barn. Har du hatt stand hos oss før og vil selge noe 17-mai
-            relatert? Da kan du selge hos oss uten å booke stand!
+            Kom innom Green Kids and moms! <br /> Vi har et bredt utvalg av festdrakter,
+            bunader, bunadssko, flagg og mer til både mamma og barn. <br /><br
+            />Har du hatt stand hos oss før og vil selge noe 17-mai relatert? Da
+            kan du selge hos oss uten å booke stand!
           </p>
+          <div class="flex justify-center my-8">
+            <div class="max-w-xl mx-auto block md:hidden my-8">
+              <Link href="" variant="primarysmall" target="_blank"
+                >Book en 17 mai stand!</Link
+              >
+            </div>
+            <div class="max-w-xl mx-auto md:block hidden my-8">
+              <Link href="" variant="primary" target="_blank"
+                >Book en 17 mai stand!</Link
+              >
+            </div>
+          </div>
         </div>
       </div>
     </article>
@@ -46,6 +60,121 @@ import bjorn from "../assets/images/norge.svg";
         class="bg-gul-400 rounded-3xl border-4 border-gronn-800 col-span-2 flex flex-col items-center justify-center text-center"
       >
         <Image src={blomst} alt="blomst" class="max-h-[80%]" />
+      </div>
+    </article>
+    <article class="pt-12 pb-20 bg-rosa-100">
+      <h2 class="text-center mb-8">Hold deg oppdatert!</h2>
+      <p class="md:px-[315px] mb-8">
+        Vi er aktive på instagram, og vi poster daglige stories av varene som vi
+        har til salgs.
+      </p>
+      <div class="flex justify-center mb-8">
+        <div class="grid grid-cols-3 gap-4">
+          <Insta />
+          <Insta />
+          <Insta />
+          <Insta />
+          <Insta />
+          <Insta />
+          <Insta />
+          <Insta />
+          <Insta />
+        </div>
+      </div>
+      <div class="flex justify-center mb-8">
+        <div class="max-w-xl mx-auto block md:hidden my-8">
+          <Link
+            href="https://www.instagram.com/greenkidsmoms/"
+            variant="secondarysmall"
+            target="_blank">Følg oss på Instagram!</Link
+          >
+        </div>
+        <div class="max-w-xl mx-auto md:block hidden my-8">
+          <Link
+            href="https://www.instagram.com/greenkidsmoms/"
+            variant="secondary"
+            target="_blank">Følg oss på Instagram!</Link
+          >
+        </div>
+      </div>
+      <p class="md:px-[315px] mb-8">
+        Vi har også en egen markedsplass på Facebook, hvor du kan se når det
+        kommer nye stands. Der kan du også skrive selv, om du er interessert i å
+        kjøpe noe spesielt. Markedsplassen heter:
+      </p>
+      <a
+        class="text-center hover:underline"
+        href="https://www.facebook.com/groups/606130270229521"
+        target="_blank"><h5>Kjøp og salg Green Kids & Moms Løren</h5></a
+      >
+      <div class="flex justify-center">
+        <div class="max-w-xl mx-auto block md:hidden my-8">
+          <Link
+            href="https://www.facebook.com/greenkidsmomssecondhand/"
+            variant="secondarysmall"
+            target="_blank">Følg oss på Facebook!</Link
+          >
+        </div>
+        <div class="max-w-xl mx-auto md:block hidden my-8">
+          <Link
+            href="https://www.facebook.com/greenkidsmomssecondhand/"
+            variant="secondary"
+            target="_blank">Følg oss på Facebook!</Link
+          >
+        </div>
+      </div>
+    </article>
+    <article class="md:px-[105px] pt-12 pb-20">
+      <h2 class="text-center mb-8">Anmeldelser fra våre kunder</h2>
+      <div class="md:grid grid-cols-3 gap-8 mb-8">
+        <Anmeldelser
+          ><span slot="navn"><h3>Tove</h3></span><span slot="tekst"
+            ><p class="text-sm">
+              Butikken er et fantastisk konsept! Kombinasjonen av at barna
+              vokser i et rasende tempo og at konseptet fungerer bra har gjort
+              at vi har blitt værende siden oppstart. Green kids er enkelt, det
+              er hyggelig, nyttig for familien økonomisk, samtidig som det er
+              lærerikt for barna.
+            </p></span
+          ></Anmeldelser
+        >
+        <Anmeldelser
+          ><span slot="navn"><h3>Madlena</h3></span><span slot="tekst"
+            ><p class="text-sm">
+              Vi elsker Green kids og har hatt stand i flere måneder! Etter 2
+              barn har mye mye klær, og det er fantastisk at vi kan tjene gode
+              penger på å selge klærne. Det er mye enklere å ha stand hos Green
+              Kids enn å selge klærne på nett, for da slipper man å avtale
+              henting og å svare på spørsmål etc.
+            </p></span
+          ></Anmeldelser
+        ><Anmeldelser
+          ><span slot="navn"><h3>Anne Grethe</h3></span><span slot="tekst"
+            ><p class="text-sm">
+              Fantastisk konsept! Det føles så bra at klærne kan komme til nytte
+              hos andre, samtidig som vi tjener penger til å kjøpe nye klær til
+              barna mens de vokser såpass raskt. Det er så spennende å se på
+              salget på mobilen, og jeg sjekker nesten daglig! Vi har selv gjort
+              mange kupp!
+            </p></span
+          ></Anmeldelser
+        >
+      </div>
+      <div class="flex justify-center">
+        <div class="max-w-xl mx-auto block md:hidden my-8">
+          <Link
+            href="https://www.instagram.com/greenkidsmoms/"
+            variant="secondarysmall"
+            target="_blank">Les flere anmeldelser</Link
+          >
+        </div>
+        <div class="max-w-xl mx-auto md:block hidden my-8">
+          <Link
+            href="https://www.instagram.com/greenkidsmoms/"
+            variant="secondary"
+            target="_blank">Les flere anmeldelser</Link
+          >
+        </div>
       </div>
     </article>
   </article>
