@@ -7,26 +7,44 @@ import Card from "../components/Gjordetselv.astro";
 import { Image } from "astro:assets";
 import logo from "../assets/images/logo.svg";
 import hero from "../assets/images/hero.svg";
+import blomst from "../assets/images/blomst2.svg";
 ---
 
 <MainLayout title="Green Kids and Moms">
   <section class="">
-    <article
-      class="text-center bg-no-repeat bg-contain bg-center h-[70vh] w-screen"
-      style={`background-image: url(${hero.src})`}
-    >
+    <article class="text-center md:hidden px-[36px]">
       <div class="mx-auto">
-        <h1 class="mt-44 mb-4">Green Kids and <br /> Moms Secondhand</h1>
+        <div class="flex justify-center mb-4">
+          <Image src={blomst} alt="blomst" class="max-w-[40%]" />
+        </div>
+        <h1 class="text-2xl mb:text-4xl mb-4">
+          Green Kids and <br /> Moms Secondhand
+        </h1>
         <p class="mb-4">
           Vi er en moderne gjenbruksbutikk i Oslo, hvor du kan kjøpe billige <br
           />
           brukte barneklær og dameklær i tillegg til brukte leker og barneutstyr
         </p>
-        <div class="max-w-xl mx-auto block md:hidden mt-8">
+        <div class="max-w-xl mx-auto block md:hidden my-8">
           <Link href="/booking" variant="primarysmall" target="_blank"
             >Book en stand hos oss!</Link
           >
         </div>
+      </div>
+    </article>
+    <article
+      class="text-center bg-no-repeat bg-contain bg-center h-[70vh] w-screen hidden md:block"
+      style={`background-image: url(${hero.src})`}
+    >
+      <div class="mx-auto">
+        <h1 class="mt-44 mb-4">
+          Green Kids and <br /> Moms Secondhand
+        </h1>
+        <p class="mb-4">
+          Vi er en moderne gjenbruksbutikk i Oslo, hvor du kan kjøpe billige <br
+          />
+          brukte barneklær og dameklær i tillegg til brukte leker og barneutstyr
+        </p>
         <div class="max-w-xl mx-auto md:block hidden mt-8">
           <Link href="/booking" variant="primary" target="_blank"
             >Book en stand hos oss!</Link
@@ -35,9 +53,9 @@ import hero from "../assets/images/hero.svg";
       </div>
     </article>
     <article
-      class="bg-blaa-400 md:grid grid-cols-5 md:px-[105px] pt-12 pb-20 gap-22"
+      class="bg-blaa-400 md:grid grid-cols-5 px-[36px] md:px-[105px] pt-12 pb-20 gap-22"
     >
-      <div class="col-span-3">
+      <div class="col-span-3 mb-8 md:mb-0">
         <h2 class="pb-4">Gjenbruk på en ny og morsom måte!</h2>
         <p class="pb-4">
           Hos oss er det privatpersoner som selger sine brukte dame- og
@@ -55,7 +73,7 @@ import hero from "../assets/images/hero.svg";
         </p>
       </div>
       <div
-        class="bg-gul-400 rounded-3xl border-4 border-gronn-800 col-span-2 flex flex-col items-center justify-center text-center"
+        class="bg-gul-400 rounded-3xl border-4 border-gronn-800 col-span-2 flex flex-col items-center justify-center text-center py-4"
       >
         <Image src={logo} alt="logo" class="max-w-[60%]" />
         <h3 class="mt-4">Har du flere <br />spørsmål?</h3>
@@ -74,8 +92,8 @@ import hero from "../assets/images/hero.svg";
     </a>
     <article class="pt-12 pb-20">
       <h2 class="text-center mb-4">Gjør det selv!</h2>
-      <div class="grid grid-cols-4 md:px-[105px]">
-        <div class="flex flex-col">
+      <div class="md:grid grid-cols-4 px-[36px] md:px-[105px]">
+        <div class="flex flex-col justify-center mb-8 md:mb-0">
           <Card>
             <Image src={logo} slot="bilde" alt="logo" class="max-w-[60%]" />
             <span slot="overskrift">Steg 1</span>
@@ -91,7 +109,7 @@ import hero from "../assets/images/hero.svg";
             >
           </div>
         </div>
-        <div>
+        <div class="mb-8 md:mb-0">
           <Card>
             <Image src={logo} slot="bilde" alt="logo" class="max-w-[60%]" />
             <span slot="overskrift">Steg 2</span>
@@ -102,7 +120,7 @@ import hero from "../assets/images/hero.svg";
             >
           </Card>
         </div>
-        <div>
+        <div class="mb-8 md:mb-0">
           <Card>
             <Image src={logo} slot="bilde" alt="logo" class="max-w-[60%]" />
             <span slot="overskrift">Steg 3</span>
@@ -113,7 +131,7 @@ import hero from "../assets/images/hero.svg";
             >
           </Card>
         </div>
-        <div>
+        <div class="mb-8 md:mb-0">
           <Card>
             <Image src={logo} slot="bilde" alt="logo" class="max-w-[60%]" />
             <span slot="overskrift">Steg 4</span>

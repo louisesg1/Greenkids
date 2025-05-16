@@ -7,14 +7,14 @@ import brev from "../assets/images/brev.svg";
 ---
 
 <MainLayout title="Kontakt oss!">
-  <section class="md:px-[105px] mb-22">
+  <section class="px-[36px] md:px-[105px] mb-22">
     <h1 class="text-center mb-8">Kontakt oss!</h1>
-    <article class="grid grid-cols-2">
-      <div class="flex flex-col items-center justify-center">
-        <Image src={brev} alt="brev" />
-      </div>
-      <div>
+    <article class="md:grid grid-cols-2">
+      <div class="order-2 mb-12 md:mb-0">
         <Form />
+      </div>
+      <div class="flex flex-col items-center justify-center order-1">
+        <Image src={brev} alt="brev" />
       </div>
     </article>
   </section>
