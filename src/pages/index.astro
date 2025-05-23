@@ -8,6 +8,10 @@ import { Image } from "astro:assets";
 import logo from "../assets/images/logo.svg";
 import hero from "../assets/images/hero.svg";
 import blomst from "../assets/images/blomst2.svg";
+import book1 from "../assets/images/book.svg";
+import book2 from "../assets/images/tskjorte.svg";
+import book3 from "../assets/images/prislapp.svg";
+import book4 from "../assets/images/penge.svg";
 ---
 
 <MainLayout title="Green Kids and Moms">
@@ -95,7 +99,12 @@ import blomst from "../assets/images/blomst2.svg";
       <div class="md:grid grid-cols-4 px-[36px] md:px-[105px]">
         <div class="flex flex-col justify-center mb-8 md:mb-0">
           <Card>
-            <Image src={logo} slot="bilde" alt="logo" class="max-w-[60%]" />
+            <Image
+              src={book1}
+              slot="bilde"
+              alt="logo"
+              class="max-w-[60%] h-22"
+            />
             <span slot="overskrift">Steg 1</span>
             <span slot="tekst"
               >Book en stand hos oss via vår nettside, direkte i butikken eller
@@ -111,7 +120,12 @@ import blomst from "../assets/images/blomst2.svg";
         </div>
         <div class="mb-8 md:mb-0">
           <Card>
-            <Image src={logo} slot="bilde" alt="logo" class="max-w-[60%]" />
+            <Image
+              src={book2}
+              slot="bilde"
+              alt="logo"
+              class="max-w-[60%] h-22"
+            />
             <span slot="overskrift">Steg 2</span>
             <span slot="tekst"
               >Finn frem det du vil selge og gjør det klart for salg. Husk at
@@ -122,7 +136,12 @@ import blomst from "../assets/images/blomst2.svg";
         </div>
         <div class="mb-8 md:mb-0">
           <Card>
-            <Image src={logo} slot="bilde" alt="logo" class="max-w-[60%]" />
+            <Image
+              src={book3}
+              slot="bilde"
+              alt="logo"
+              class="max-w-[60%] h-22"
+            />
             <span slot="overskrift">Steg 3</span>
             <span slot="tekst"
               >Ta klærne med til butikk, gjør ferdig prislapper og heng opp
@@ -133,7 +152,12 @@ import blomst from "../assets/images/blomst2.svg";
         </div>
         <div class="mb-8 md:mb-0">
           <Card>
-            <Image src={logo} slot="bilde" alt="logo" class="max-w-[60%]" />
+            <Image
+              src={book4}
+              slot="bilde"
+              alt="logo"
+              class="max-w-[60%] h-22"
+            />
             <span slot="overskrift">Steg 4</span>
             <span slot="tekst"
               >Tøm standen når leieperioden er over eller lei en ryddetjeneste
