@@ -13,17 +13,6 @@
         stroke: #33411d;
       }
 
-      .cls-3 {
-        fill: #5a6c3a;
-        font-family: BricolageGrotesque-ExtraBold, 'Bricolage Grotesque';
-        font-size: 48px;
-        font-weight: 700;
-      }
-
-      .cls-4 {
-        letter-spacing: 0em;
-      }
-
       .cls-2 {
         fill: none;
         stroke-miterlimit: 10;
@@ -38,5 +27,4 @@
     <path class="cls-2" d="M152.2,188.94h16.33c2.56,0,5.61,2.88,6.84,6.58l8.31,24.92c1.84,5.52.67,10.33-2.72,10.33h-101.43c-3.39,0-4.55-4.81-2.71-10.33l8.33-24.92c1.24-3.7,4.29-6.58,6.85-6.58h17.72"/>
   </g>
   <rect class="cls-1" x="28.6" y="23.6" width="211.26" height="113.46" rx="27.88" ry="27.88"/>
-  <text class="cls-3" transform="translate(73.94 74.17) rotate(.72) skewX(.21)"><tspan x="0" y="0">Book</tspan><tspan x="23.59" y="44">n</tspan><tspan class="cls-4" x="54.46" y="44">å</tspan><tspan x="82.87" y="44">!</tspan></text>
 </svg>
