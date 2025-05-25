@@ -86,21 +86,13 @@
 @layer base {
   h1 {
     font-family: 'Bricolage Grotesque', sans-serif;
-    font-size: var(--text-3xl);
-    line-height: var(--text-3xl--line-height);
-    font-weight: var(--font-weight-bold);
-    color: var(--color-gronn-800);
-  }
-
-  h2 {
-    font-family: 'Bricolage Grotesque', sans-serif;
     font-size: var(--text-2xl);
     line-height: var(--text-2xl--line-height);
     font-weight: var(--font-weight-bold);
     color: var(--color-gronn-800);
   }
 
-  h3 {
+  h2 {
     font-family: 'Bricolage Grotesque', sans-serif;
     font-size: var(--text-xl);
     line-height: var(--text-xl--line-height);
@@ -108,18 +100,26 @@
     color: var(--color-gronn-800);
   }
 
+  h3 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: var(--text-lg);
+    line-height: var(--text-lg--line-height);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-gronn-800);
+  }
+
   h4 {
     font-family: 'Manrope', sans-serif;
-    font-size: var(--text-xl);
-    line-height: var(--text-xl--line-height);
+    font-size: var(--text-lg);
+    line-height: var(--text-lg--line-height);
     font-weight: var(--font-weight-bold);
     color: var(--color-gronn-800);
   }
 
   h5 {
     font-family: 'Manrope', sans-serif;
-    font-size: var(--text-lg);
-    line-height: var(--text-lg--line-height);
+    font-size: var(--text-base);
+    line-height: var(--text-base--line-height);
     font-weight: var(--font-weight-bold);
     color: var(--color-gronn-800);
   }
