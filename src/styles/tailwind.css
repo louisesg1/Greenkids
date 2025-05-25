@@ -123,8 +123,14 @@
     font-weight: var(--font-weight-bold);
     color: var(--color-gronn-800);
   }
-
-  p, a {
+  p {
+    font-family: 'Manrope', sans-serif;
+    font-size: var(--text-sm);
+    line-height: var(--text-sm--line-height);
+    font-weight: var(--font-weight-normal);
+    color: var(--color-gronn-800);
+  }
+a {
     font-family: 'Manrope', sans-serif;
     font-size: var(--text-base);
     line-height: var(--text-base--line-height);
@@ -154,6 +160,13 @@
     font-size: var(--text-2xl);
     line-height: var(--text-2xl--line-height);
     font-weight: var(--font-weight-bold);
+    color: var(--color-gronn-800);
+  }
+    p, a {
+    font-family: 'Manrope', sans-serif;
+    font-size: var(--text-base);
+    line-height: var(--text-base--line-height);
+    font-weight: var(--font-weight-normal);
     color: var(--color-gronn-800);
   }
   }
